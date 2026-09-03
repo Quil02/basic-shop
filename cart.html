@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Toko RPL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Keranjang Belanja</h1>
+        <a href="index.html" style="color:white; text-decoration:none; font-weight:bold;">&larr; Kembali Berbelanja</a>
+    </header>
+
+    <div class="container">
+        <div class="box-card">
+            <h2>Daftar Item Pilihan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Produk</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTable"></tbody>
+            </table>
+            <div id="totalHarga" style="margin-top: 20px; text-align: right; font-size: 1.3rem; font-weight: bold; color: var(--warna-aksen);">
+                Total: Rp 0
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/cart.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

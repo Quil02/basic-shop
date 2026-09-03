@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Toko RPL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Admin</h1>
+        <button onclick="logout()" class="btn-danger" style="width: auto;">Logout</button>
+    </header>
+
+    <div class="container">
+        <!-- Kotak Manajemen Tag -->
+        <div class="box-card" style="margin-bottom: 20px;">
+            <h3>Manajemen Kategori / Tag</h3>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <input type="text" id="inputTagBaru" placeholder="Ketik nama tag baru..." style="margin: 0; flex: 1;">
+                <button type="button" onclick="tambahTag()" style="background-color: var(--warna-sukses);">Tambah Tag</button>
+            </div>
+            <div id="containerTag" style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;"></div>
+        </div>
+
+        <div class="box-card">
+            <h3 id="formTitle">Tambah Produk Baru</h3>
+            <form id="formProduk">
+                <input type="hidden" id="editIndex">
+                <div>
+                    <label>Nama Produk:</label>
+                    <input type="text" id="nama" required>
+                </div>
+                <div>
+                    <label>Kategori / Tag Produk (Bisa pilih lebih dari satu):</label>
+                    <div id="kategoriCheckboxes" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; margin-bottom: 15px; background: var(--warna-bg); padding: 10px; border-radius: 4px; border: 1px solid #ccc;"></div>
+                </div>
+                <div>
+                    <label>Harga Produk (Rp):</label>
+                    <input type="number" id="harga" required>
+                </div>
+                <div>
+                    <label>URL Gambar Produk:</label>
+                    <input type="url" id="gambar" placeholder="https://example.com/gambar.jpg" required>
+                </div>
+                <button type="submit" id="btnSimpan" style="background-color: var(--warna-sukses);">Simpan Produk</button>
+            </form>
+        </div>
+
+        <div class="box-card" style="margin-top: 30px;">
+            <h2>Daftar Produk Toko</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Produk</th>
+                        <th>Tag/Kategori</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelProduk"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="js/admin.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
