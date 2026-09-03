@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katalog Produk - Toko RPL</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Toko RPL</h1>
-        <div class="nav-right">
-            <span id="salamUser">Halo, User</span>
-            <a href="cart.html" class="btn-cart">🛒 Keranjang (<span id="cartCount">0</span>)</a>
-            <button onclick="logout()" class="btn-danger" style="width: auto;">Logout</button>
-        </div>
+      <h1>Toko RPL</h1>
+      <div class="nav-right">
+        <span id="salamUser">Halo, User</span>
+        <a href="cart.html" class="btn-cart"
+          >🛒 Keranjang (<span id="cartCount">0</span>)</a
+        >
+        <button onclick="logout()" class="btn-danger" style="width: auto">
+          Logout
+        </button>
+      </div>
     </header>
 
     <div class="container">
-        <h2>Katalog Produk</h2>
-        
-        <!-- Fitur Pencarian & Kategori -->
-        <div class="filter-wrapper" style="display: flex; gap: 15px; margin-top: 15px; margin-bottom: 20px;">
-            <input type="text" id="inputPencarian" placeholder="Cari nama produk..." style="margin:0;">
-            <select id="filterKategori" style="margin:0; width: 250px;"></select>
-        </div>
+      <h2>Katalog Produk</h2>
 
-        <div class="grid-produk" id="produkContainer"></div>
+      <!-- Fitur Pencarian & Kategori -->
+      <div
+        class="filter-wrapper"
+        style="display: flex; gap: 15px; margin-top: 15px; margin-bottom: 20px"
+      >
+        <input
+          type="text"
+          id="inputPencarian"
+          placeholder="Cari nama produk..."
+          style="margin: 0"
+        />
+        <select id="filterKategori" style="margin: 0; width: 250px"></select>
+      </div>
+
+      <div class="grid-produk" id="produkContainer"></div>
     </div>
 
     <script src="js/shop.js"></script>
     <script src="js/theme.js"></script>
-</body>
+  </body>
 </html>
