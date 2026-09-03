@@ -6,48 +6,55 @@
     <title>Login - Toko RPL</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
+        .login-wrapper {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            padding: 20px;
         }
         .login-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
+            background: var(--warna-card);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--warna-border);
+            width: 100%;
+            max-width: 380px;
         }
         h2 {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: var(--warna-utama);
             text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
         .info {
-            font-size: 0.85rem;
-            color: #7f8c8d;
-            margin-top: 15px;
+            font-size: 0.82rem;
+            color: var(--warna-teks-muted);
+            margin-top: 12px;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="login-card">
-        <h2>Login Toko RPL</h2>
-        <form id="formLogin">
-            <div>
-                <label>Username:</label>
-                <input type="text" id="username" required placeholder="Masukkan username">
-            </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" id="password" required placeholder="Masukkan password">
-            </div>
-            <button type="submit">Masuk</button>
-        </form>
-        <div class="info">*Jika username adalah 'admin', anda akan masuk ke panel admin.</div>
-        <div class="info">*Pilih role 'Admin' untuk panel admin, atau 'User' untuk belanja.</div>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <h2>Login Toko RPL</h2>
+            <form id="formLogin">
+                <div>
+                    <label>Username:</label>
+                    <input type="text" id="username" required placeholder="Masukkan username">
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" id="password" required placeholder="Masukkan password">
+                </div>
+                <button type="submit" style="width: 100%; margin-top: 8px;">Masuk</button>
+            </form>
+            <div class="info">*Jika username adalah 'admin', anda akan masuk ke panel admin.</div>
+            <div class="info">*Pilih role 'Admin' untuk panel admin, atau 'User' untuk belanja.</div>
+        </div>
     </div>
     
     <script src="js/auth.js"></script>

@@ -16,8 +16,8 @@
         <!-- Kotak Manajemen Tag -->
         <div class="box-card" style="margin-bottom: 20px;">
             <h3>Manajemen Kategori / Tag</h3>
-            <div style="display: flex; gap: 10px; margin-top: 10px;">
-                <input type="text" id="inputTagBaru" placeholder="Ketik nama tag baru..." style="margin: 0; flex: 1;">
+            <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                <input type="text" id="inputTagBaru" placeholder="Ketik nama tag baru..." style="margin: 0; flex: 1; min-width: 200px;">
                 <button type="button" onclick="tambahTag()" style="background-color: var(--warna-sukses);">Tambah Tag</button>
             </div>
             <div id="containerTag" style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;"></div>
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <label>Kategori / Tag Produk (Bisa pilih lebih dari satu):</label>
-                    <div id="kategoriCheckboxes" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; margin-bottom: 15px; background: var(--warna-bg); padding: 10px; border-radius: 4px; border: 1px solid #ccc;"></div>
+                    <div id="kategoriCheckboxes" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 5px; margin-bottom: 15px; background: var(--warna-bg); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--warna-border);"></div>
                 </div>
                 <div>
                     <label>Harga Produk (Rp):</label>
@@ -49,18 +49,20 @@
 
         <div class="box-card" style="margin-top: 30px;">
             <h2>Daftar Produk Toko</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Produk</th>
-                        <th>Tag/Kategori</th>
-                        <th>Harga</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="tabelProduk"></tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Produk</th>
+                            <th>Tag/Kategori</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelProduk"></tbody>
+                </table>
+            </div>
         </div>
     </div>
     

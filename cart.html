@@ -9,25 +9,30 @@
 <body>
     <header>
         <h1>Keranjang Belanja</h1>
-        <a href="index.html" style="color:white; text-decoration:none; font-weight:bold;">&larr; Kembali Berbelanja</a>
+        <a href="index.html" class="btn-cart" style="text-decoration:none;">&larr; Kembali Berbelanja</a>
     </header>
 
     <div class="container">
         <div class="box-card">
             <h2>Daftar Item Pilihan</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Produk</th>
-                        <th>Harga</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="cartTable"></tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTable"></tbody>
+                </table>
+            </div>
             <div id="totalHarga" style="margin-top: 20px; text-align: right; font-size: 1.3rem; font-weight: bold; color: var(--warna-aksen);">
                 Total: Rp 0
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 15px;">
+                <button onclick="checkout()" style="background-color: var(--warna-sukses);">Checkout Sekarang</button>
             </div>
         </div>
     </div>

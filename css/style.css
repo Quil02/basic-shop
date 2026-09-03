@@ -333,4 +333,40 @@ tbody tr:hover {
 }
 
 /* --- RESPONSIVE BREAKPOINTS --- */
-@media (max-width: 768px
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 14px 4%;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container {
+        padding: 16px 4%;
+    }
+
+    .filter-wrapper {
+        flex-direction: column !important;
+    }
+
+    .filter-wrapper select,
+    .filter-wrapper input {
+        width: 100% !important;
+    }
+
+    .grid-produk {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-toggle-btn {
+        bottom: 16px;
+        right: 16px;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+}
